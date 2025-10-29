@@ -1,0 +1,13 @@
+<mat-card class="logout-card">
+  <h2>Cerrar Sesión</h2>
+  
+  <button mat-raised-button color="primary" (click)="cerrar()">
+    <mat-icon>logout</mat-icon>
+    Cerrar sesión
+  </button>
+
+  <p *ngIf="cerrado" class="msg">
+    <mat-icon color="primary">check_circle</mat-icon>
+    ✅ Sesión cerrada correctamente
+  </p>
+</mat-card>

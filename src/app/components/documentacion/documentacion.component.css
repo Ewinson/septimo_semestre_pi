@@ -1,0 +1,23 @@
+.doc-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  padding: 8px; /* reduce padding interno */
+}
+
+.doc-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.miniatura {
+  background: #90caf9; /* Color Material azul claro */
+  width: 90px;       /* tamaño cuadrado */
+  height: 90px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}

@@ -1,0 +1,22 @@
+/* cerrar-sesion.component.css */
+.logout-card {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+button mat-icon {
+  margin-right: 5px;
+}
+
+.msg {
+  margin-top: 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}

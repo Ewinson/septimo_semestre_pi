@@ -1,0 +1,14 @@
+<h2 style="text-align:center; margin-bottom:20px;">Vista Documentación</h2>
+
+<mat-grid-list cols="3" rowHeight="1:1" gutterSize="20px" *ngIf="docs.length">
+  <mat-grid-tile *ngFor="let doc of docs">
+    <mat-card class="doc-card" appearance="outlined">
+      <mat-card-header>
+        <div class="miniatura"></div>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ doc.titulo }}</p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,14 @@
+<mat-card class="preferences-card">
+  <h2>Preferencias</h2>
+
+  <mat-slide-toggle 
+    [checked]="modoOscuro" 
+    (change)="cambiarTema()"
+    color="primary">
+    Modo oscuro
+  </mat-slide-toggle>
+
+  <button mat-raised-button color="accent" (click)="cambiarTema()" style="margin-top: 20px;">
+    Cambiar modo
+  </button>
+</mat-card>

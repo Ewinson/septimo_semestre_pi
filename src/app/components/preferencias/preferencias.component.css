@@ -1,0 +1,17 @@
+/* preferencias.component.css */
+.preferences-card {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+h2 {
+  margin-bottom: 25px;
+}
+
+mat-slide-toggle {
+  font-size: 16px;
+}

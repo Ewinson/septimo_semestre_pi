@@ -1,0 +1,13 @@
+<h2>Vista Cuenta</h2>
+<form>
+  <label>Nombre:</label>
+  <input type="text" [(ngModel)]="usuario.nombre" name="nombre">
+  <label>Correo:</label>
+  <input type="email" [(ngModel)]="usuario.email" name="email">
+</form>
+
+<div class="info">
+  <p><strong>DNI:</strong> {{usuario.dni}}</p>
+  <p><strong>País:</strong> {{usuario.pais}}</p>
+  <p><strong>Ciudad:</strong> {{usuario.ciudad}}</p>
+</div>
