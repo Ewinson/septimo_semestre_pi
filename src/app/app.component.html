@@ -1,4 +1,4 @@
-<div class="app-container">
+<div class="app-container" *ngIf="!esLogin">
   <aside class="sidebar">
     <h2 class="logo">Logotipo</h2>
     <nav>
@@ -10,19 +10,24 @@
   </aside>
 
   <main class="main-content">
-    <header class="header">
-      <div class="user-menu">
-        <span class="username">Usuario 👤</span>
-        <div class="dropdown">
-          <a routerLink="/cuenta">Cuenta</a>
-          <a routerLink="/preferencias">Preferencias</a>
-          <a routerLink="/cerrar-sesion">Cerrar sesión</a>
-        </div>
-      </div>
-    </header>
+  <header class="header">
+  <div class="user-menu" (click)="toggleDropdown()">
+    <span class="username">{{ nombreUsuario }} 👤</span>
+    <div class="dropdown" [class.show]="menuAbierto">
+      <a routerLink="/cuenta">Cuenta</a>
+      <a routerLink="/preferencias">Preferencias</a>
+      <a routerLink="/cerrar-sesion">Cerrar sesión</a>
+    </div>
+  </div>
+</header>
+
+
 
     <section class="content">
       <router-outlet></router-outlet>
     </section>
   </main>
 </div>
+
+<!-- Vista login -->
+<router-outlet *ngIf="esLogin"></router-outlet>

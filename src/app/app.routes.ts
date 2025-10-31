@@ -8,7 +8,13 @@ import { PreferenciasComponent } from './components/preferencias/preferencias.co
 import { CerrarSesionComponent } from './components/cerrar-sesion/cerrar-sesion.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  // 👉 Ruta inicial
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+
+  // 👉 Login (lazy load)
+  { path: 'login', loadComponent: () => import('./login/login.component').then(m => m.LoginComponent) },
+
+  // 👉 Rutas principales
   { path: 'dashboard', component: DashboardComponent },
   { path: 'informacion', component: InformacionComponent },
   { path: 'soporte', component: SoporteComponent },
@@ -16,4 +22,7 @@ export const routes: Routes = [
   { path: 'cuenta', component: CuentaComponent },
   { path: 'preferencias', component: PreferenciasComponent },
   { path: 'cerrar-sesion', component: CerrarSesionComponent },
+
+  // 👉 Cualquier otra ruta no existente → login
+  { path: '**', redirectTo: 'login' },
 ];
